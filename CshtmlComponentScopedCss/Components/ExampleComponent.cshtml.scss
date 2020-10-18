@@ -1,0 +1,33 @@
+﻿.example-component
+{
+    // Style the wrapper here.
+    padding: 10px;
+    background: rgba(255, 0, 0, 0.1);
+
+    & > .example-component-slot-content
+    {
+        // Apply styles to the slot content container here.
+        padding: 6px;
+        border: 4px solid rgba(0, 0, 0, 0.4);
+    }
+
+    & > *:not(.child-content)
+    {
+        // Apply styles to child tags that are used by the component (but not nested under .child-content) here.
+        // Note: Requires a wrapper element (in this component, the element with class="example-component-content" is the wrapper).
+        h2
+        {
+            color: red;
+        }
+
+        .top-bar-heading
+        {
+            color: blue;
+        }
+
+        .date
+        {
+            font-style: italic;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<ExampleComponent Title="Hello World">
+    <CshtmlSlot Name="TopBar">
+        <h2>
+            This H2 is not red, even if the H2 in ExampleComponent is red.
+        </h2>
+        <p class="date">
+            This element with class="date" is not italicised, even if the corresponding class in ExampleComponent is italicised.
+        </p>
+    </CshtmlSlot>
+    <h2>
+        This H2 is not red, even if the H2 in ExampleComponent is red.
+    </h2>
+    <p class="date">
+        This element with class="date" is not italicised, even if the corresponding class in ExampleComponent is italicised.
+    </p>
+    <ExampleComponent Title="This is Again in Red">
+        <CshtmlSlot Name="TopBar">
+            <h2>
+                This H2 is not red, even if the H2 in ExampleComponent is red.
+            </h2>
+            <p class="date">
+                This element with class="date" is not italicised, even if the corresponding class in ExampleComponent is italicised.
+            </p>
+        </CshtmlSlot>
+        <h2>
+            This H2 is not red, even if the H2 in ExampleComponent is red.
+        </h2>
+        <p class="date">
+            This element with class="date" is not italicised, even if the corresponding class in ExampleComponent is italicised.
+        </p>
+    </ExampleComponent>
+</ExampleComponent>

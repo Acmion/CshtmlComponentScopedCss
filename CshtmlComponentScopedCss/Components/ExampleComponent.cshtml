@@ -1,0 +1,36 @@
+﻿@model ExampleComponent
+
+<CshtmlHead>
+    <link rel="stylesheet" href="~/dist/Components/ExampleComponent.cshtml.css" />
+</CshtmlHead>
+
+<div class="example-component">
+    <div class="example-component-content">
+        <h2>
+            @Model.Title
+        </h2>
+        <p class="date">
+            Date: @DateTime.Now.ToShortDateString()
+        </p>
+    </div>
+    <div class="example-component-slot-content">
+        <h2 class="top-bar-heading">
+            TopBar
+        </h2>
+        <div class="child-content">
+            @if (Model.NamedSlots.TryGetValue("TopBar", out var slotContent))
+            {
+                @Html.Raw(slotContent)
+            }
+            else
+            {
+                <p>
+                    <strong>Error:</strong> No slot content for "TopBar" available.
+                </p>
+            }
+        </div>
+    </div>
+    <div class="example-component-child-content child-content">
+        @Html.Raw(Model.ChildContent)
+    </div>
+</div>
