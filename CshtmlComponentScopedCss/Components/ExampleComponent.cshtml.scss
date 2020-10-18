@@ -14,7 +14,9 @@
     & > *:not(.child-content)
     {
         // Apply styles to child tags that are used by the component (but not nested under .child-content) here.
-        // Note: Requires a wrapper element (in this component, the element with class="example-component-content" is the wrapper).
+        // Note: Requires a wrapper element. In this component, the elements with class="example-component-content" 
+        // and class="example-component-slot-content" are the wrapper elements. Styles are only applied to children 
+        // of the wrapper elements.
         h2
         {
             color: red;

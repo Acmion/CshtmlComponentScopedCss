@@ -1,2 +1,2 @@
 # CshtmlComponentScopedCss
-CshtmlComponent scoped css example.
+[CshtmlComponent](https://cshtml-component.acmion.com/#credits) scoped css example.
